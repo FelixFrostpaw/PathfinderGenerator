@@ -1,0 +1,11 @@
+{
+    "items": 
+    [
+      {
+        "name": "Goblin",
+        "type": "Creature",
+        "level": 5,
+        "strength": "high"
+      }
+    ]
+}
