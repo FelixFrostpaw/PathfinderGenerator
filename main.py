@@ -1,5 +1,6 @@
 import json
-from toolbox import toolbox
+from toolbox import process_types
+from toolbox import general
 
 
 def main():
@@ -7,19 +8,18 @@ def main():
     data = json.load(f)
 
   items = data['items']
-  # print(items)
 
   for item in items:
     output = ""
 
-    item_type = item['type'].lower()
+    item_type = general.process_type(item)
 
-    if toolbox.valid_types(item_type) == False:
+    if not general.valid_types(item_type):
       raise Exception("Invalid Type")
 
     if item_type == "creature":
       # do creature stuff
-      toolbox.process_creature(item)
+      process_types.process_creature(item)
 
     if item_type == "hazard":
       # do hazard stuff
