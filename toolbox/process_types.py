@@ -1,5 +1,4 @@
-import random
-import math
+import pprint
 
 from toolbox import general
 
@@ -15,7 +14,7 @@ from toolbox import creature_special_abilities
 
 
 def process_creature(creature):
-  name_creature = general.process_name(creature)
+  name = general.process_name(creature)
 
   level = general.process_level(creature)
 
@@ -57,7 +56,7 @@ def process_creature(creature):
   special_abilities = creature_special_abilities.process_special_abilities(
       creature)
 
-  print("name", name_creature)
+  print("name", name)
 
   print()
 
@@ -72,7 +71,7 @@ def process_creature(creature):
   print()
 
   print("perception", perception_modifier)
-  print("skilss", skill_modifiers)
+  print("skills", skill_modifiers)
 
   print()
 
@@ -95,7 +94,8 @@ def process_creature(creature):
 
   print()
 
-  print("strikes", strikes)
+  print("strikes")
+  pprint.pp(strikes)
 
   print()
 
@@ -104,4 +104,19 @@ def process_creature(creature):
 
   print()
 
-  print("special_abilities", special_abilities)
+  print("special_abilities")
+  pprint.pp(special_abilities)
+
+
+# def process_hazard(hazard):
+# name = general.process_name(hazard)
+
+# level = general.process_level(hazard)
+
+# simple_or_complex = toolbox.hazard_type(hazard)
+# hazard_type = toolbox.hazard_type(hazard)
+
+# stealth = toolbox.hazard_stealth(hazard)
+# stealth_modifier = stealth - 10
+
+# disable = toolbox.hazard_disable(hazard)

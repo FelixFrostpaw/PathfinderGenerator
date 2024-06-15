@@ -1,4 +1,3 @@
-#Complex Hazards reduce STEALTH DC (not Disable DC) by 10
 terrible_dcs = [
     11, 12, 13, 14, 15, 17, 18, 19, 21, 22, 23, 25, 26, 27, 29, 30, 31, 33, 34,
     35, 37, 38, 39, 40, 42, 43
